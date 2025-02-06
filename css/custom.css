@@ -44,6 +44,15 @@ body {
 .bg-red-500 {
     background-color: #fb2c36;
 }
+.bg-blue-900 {
+    background-color: #1c398e;
+}
+
+.text-yellow-300 {
+    color: #ffdf20;
+}
+
+ 
 
 .font-fm{
     font-family: "Playfair Display", serif;
