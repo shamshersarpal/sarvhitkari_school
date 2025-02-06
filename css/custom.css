@@ -28,13 +28,21 @@ body {
   .mt-1 {
     margin-top: 0.25rem;
   }
-  
+
 .bg-reds{
     background-color: #ed1c24;
 }
 
+.bg-gray-100 {
+    background-color: #f6f3f4;
+}
+
 .text-reds{
      color: #ed1c24;
+}
+
+.bg-red-500 {
+    background-color: #fb2c36;
 }
 
 .font-fm{
