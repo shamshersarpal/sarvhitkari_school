@@ -4,6 +4,31 @@ body {
     color: #272727;
   }
 
+  .topBar {
+    background-color: #1e3a8a; /* Use hex color code for blue-900 */
+    color: #ffffff; /* Use hex color code for white */
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .gap-8 {
+    gap: 2rem;
+  }
+  
+  .gap-2 {
+    gap: 0.5rem;
+  }
+  
+  .mt-1 {
+    margin-top: 0.25rem;
+  }
+  
 .bg-reds{
     background-color: #ed1c24;
 }
