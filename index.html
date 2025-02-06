@@ -13,6 +13,7 @@
   </head>
   <body>
     <header>
+      <!-- Top Bar -->
       <div class="topBar bg-blue-900 text-white py-1">
         <div class="max-w-screen-xl m-auto">
           <div class="lg:flex row flex-wrap justify-between items-center">
@@ -35,10 +36,11 @@
           </div>
         </div>
       </div>
-
+    
+      <!-- Logo Section -->
       <div class="logosection lg:px-0 px-4">
         <div class="flex items-center lg:justify-center justify-between gap-4 py-1">
-         <img class="logo" src="images/logo.png">
+          <img class="logo" src="images/logo.png">
           <h1 class="text-black text-4xl text-center font-fm font-bold lg:block hidden">
             Jitender veer Sarvhitkari Model <br> Senior Secondary School  
           </h1>
@@ -50,41 +52,42 @@
           </button>
         </div>
       </div>
-
+    
+      <!-- Menu Section -->
       <div class="menu bg-blue-900 lg:py-1 py-0">
         <nav class="border-gray-200 ">
           <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
-            
             <div class="hidden mx-auto w-full md:block md:w-auto" id="navbar-dropdown">
               <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
                 <li class="hover:bg-red-500 p-2 rounded-lg bg-red-500">
                   <a href="#" class="block text-white font-normal">Home</a>
                 </li>
-
-                
+    
+                <!-- About Us Dropdown -->
                 <li class="hover:bg-red-500 p-2 rounded-lg group relative">
-                  <button class="flex items-center justify-between w-full text-white font-normal cursor-pointer">
+                  <button onclick="toggleSubmenu('about-us')" class="flex items-center justify-between w-full text-white font-normal cursor-pointer">
                     About Us 
                     <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                     </svg>
                   </button>
-                  <div class="absolute left-0 top-10 z-50 hidden group-hover:block font-normal bg-blue-900 divide-y divide-gray-100 rounded-lg   w-44">
+                  <div id="about-us" class="absolute left-0 top-10 z-50 hidden group-hover:block md:group-hover:block font-normal bg-blue-900 divide-y divide-gray-100 rounded-lg w-44">
                     <ul class="py-2 text-sm text-white">
                       <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Our Message</a></li>
                       <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Our Faculty</a></li> 
                     </ul>
                   </div>
                 </li>
-
+    
+                <!-- Admissions Dropdown -->
                 <li class="hover:bg-red-500 p-2 rounded-lg group relative">
-                  <button class="flex items-center justify-between w-full text-white font-normal cursor-pointer">
-                     Admissions
+                  <button onclick="toggleSubmenu('admissions')" class="flex items-center justify-between w-full text-white font-normal cursor-pointer">
+                    Admissions
                     <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                     </svg>
                   </button>
-                  <div class="absolute left-0 top-10 z-50 hidden group-hover:block font-normal bg-blue-900 divide-y divide-gray-100 rounded-lg   w-44">
+                  <div id="admissions" class="absolute left-0 top-10 z-50 hidden group-hover:block md:group-hover:block font-normal bg-blue-900 divide-y divide-gray-100 rounded-lg w-44">
                     <ul class="py-2 text-sm text-white">
                       <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Admission Procedure</a></li>
                       <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Admission Form</a></li> 
@@ -92,16 +95,16 @@
                     </ul>
                   </div>
                 </li>
-
-
+    
+                <!-- Academics Dropdown -->
                 <li class="hover:bg-red-500 p-2 rounded-lg group relative">
-                  <button class="flex items-center justify-between w-full text-white font-normal cursor-pointer">
-                     Academics
+                  <button onclick="toggleSubmenu('academics')" class="flex items-center justify-between w-full text-white font-normal cursor-pointer">
+                    Academics
                     <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                     </svg>
                   </button>
-                  <div class="absolute left-0 top-10 z-50 hidden group-hover:block font-normal bg-blue-900 divide-y divide-gray-100 rounded-lg   w-44">
+                  <div id="academics" class="absolute left-0 top-10 z-50 hidden group-hover:block md:group-hover:block font-normal bg-blue-900 divide-y divide-gray-100 rounded-lg w-44">
                     <ul class="py-2 text-sm text-white">
                       <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Balvatika</a></li>
                       <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Primary</a></li> 
@@ -110,9 +113,8 @@
                     </ul>
                   </div>
                 </li>
-                
-                 
-               
+    
+                <!-- Other Menu Items -->
                 <li class="hover:bg-red-500 p-2 rounded-lg">
                   <a href="#" class="block text-white font-normal">School Club</a>
                 </li>
@@ -131,6 +133,8 @@
         </nav>
       </div>
     </header>
+    
+    
 
 
     <section class="hero">
@@ -148,9 +152,7 @@
             <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center font-fm">
                Lorem Ipsum
              </h2>
-             <p class="text-sm sm:text-base md:text-lg lg:text-xl text-white text-center">
-               Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
-             </p>
+             
              
         </div>
         
@@ -162,9 +164,7 @@
             <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center font-fm">
                Lorem Ipsum
              </h2>
-             <p class="text-sm sm:text-base md:text-lg lg:text-xl text-white text-center">
-               Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
-             </p>
+             
              
         </div>
        </div>
@@ -179,9 +179,7 @@
            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center font-fm">
               Lorem Ipsum
             </h2>
-            <p class="text-sm sm:text-base md:text-lg lg:text-xl text-white text-center">
-              Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
-            </p>
+           
             
        </div>
       </div>
@@ -193,9 +191,7 @@
          <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center font-fm">
             Lorem Ipsum
           </h2>
-          <p class="text-sm sm:text-base md:text-lg lg:text-xl text-white text-center">
-            Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
-          </p>
+          
           
      </div>
     </div>
@@ -372,7 +368,7 @@
                   <img alt="" class="w-full h-72 object-cover scale-125 group-hover:scale-100 duration-500" src="images/ss-1.jpg">
                   <div class="absolute inset-0 bg-gradient-to-b to-slate-900 from-transparent opacity-0 group-hover:opacity-100 duration-500"></div>
                   <div class="absolute p-4 bottom-0 start-0">
-                      <a class="text-lg font-medium text-black hover:text-blue duration-500 ease-in-out bg-gray-300 px-2 py-1 rounded-md">Attention to sports</a>
+                      <a class="text-lg font-medium text-white hover:text-blue duration-500 ease-in-out bg-red-500 px-2 py-1 rounded-md">Attentions to sports</a>
                   </div>
               </div>
           
@@ -388,7 +384,7 @@
                   <img alt="" class="w-full h-72 object-cover scale-125 group-hover:scale-100 duration-500" src="images/ss-2.jpg">
                   <div class="absolute inset-0 bg-gradient-to-b to-slate-900 from-transparent opacity-0 group-hover:opacity-100 duration-500"></div>
                   <div class="absolute p-4 bottom-0 start-0">
-                      <a class="text-lg font-medium text-black hover:text-blue duration-500 ease-in-out bg-gray-300 px-2 py-1 rounded-md">Skilled Faculty</a>
+                      <a class="text-lg font-medium text-white hover:text-blue duration-500 ease-in-out bg-red-500 px-2 py-1 rounded-md">Skilled Faculty</a>
                   </div>
               </div>
           
@@ -404,7 +400,7 @@
                   <img alt="" class="w-full h-72 object-cover scale-125 group-hover:scale-100 duration-500" src="images/ss-3.jpg">
                   <div class="absolute inset-0 bg-gradient-to-b to-slate-900 from-transparent opacity-0 group-hover:opacity-100 duration-500"></div>
                   <div class="absolute p-4 bottom-0 start-0">
-                      <a class="text-lg font-medium text-black hover:text-blue duration-500 ease-in-out bg-gray-300 px-2 py-1 rounded-md">Well Equipped La</a>
+                      <a class="text-lg font-medium text-white hover:text-blue duration-500 ease-in-out bg-red-500 px-2 py-1 rounded-md">Well Equipped La</a>
                   </div>
               </div>
           
@@ -419,7 +415,7 @@
                   <img alt="" class="w-full h-72 object-cover scale-125 group-hover:scale-100 duration-500" src="images/ss-4.jpg">
                   <div class="absolute inset-0 bg-gradient-to-b to-slate-900 from-transparent opacity-0 group-hover:opacity-100 duration-500"></div>
                   <div class="absolute p-4 bottom-0 start-0">
-                      <a class="text-lg font-medium text-black hover:text-blue duration-500 ease-in-out bg-gray-300 px-2 py-1 rounded-md">NCC</a>
+                      <a class="text-lg font-medium text-white hover:text-blue duration-500 ease-in-out bg-red-500 px-2 py-1 rounded-md">NCC</a>
                   </div>
               </div>
           
@@ -696,19 +692,12 @@
   updateCarousel(); // Ensure initial position
 </script>
 
+<!-- JavaScript for Mobile Submenu Toggle -->
 <script>
-  const colors = require('tailwindcss/colors')
-
-module.exports = {
-    theme: {
-        extend: {
-            colors: {
-                   //just add this below and your all other tailwind colors willwork
-                ...colors
-            }
-        }
-    }
-}
+  function toggleSubmenu(id) {
+    const submenu = document.getElementById(id);
+    submenu.classList.toggle('hidden');
+  }
 </script>
   </body>
 </html>
