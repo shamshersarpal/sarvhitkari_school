@@ -1,702 +1,610 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sarvhitkari School</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.png"> 
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.5.2/css/pro.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
-  </head>
-  <body>
-    <header>
-      <!-- Top Bar -->
-      <div class="topBar bg-blue-900 text-white py-1">
-        <div class="max-w-screen-xl m-auto">
-          <div class="lg:flex row flex-wrap justify-between items-center">
-            <div class="lg:w-7/12 px-5 text-left">
-              <div class="flex items-center gap-8">
-                <span class="flex items-center gap-2">
-                  <i class="fa-solid fa-phone mt-1"></i> 0123456779
-                </span>
-                <span class="flex items-center gap-2">
-                  <i class="fa-solid fa-envelope mt-1"></i> example@email.com
-                </span>
-              </div>
-            </div>
-            <div class="lg:w-5/12 px-5 text-right hidden lg:block">
-              <div class="flex items-center justify-end gap-2">
-                <a href="" class="px-3 py-2 text-xs font-medium text-center text-white bg-reds rounded-lg hover:bg-blue-800 focus:ring-0 focus:outline-none">Fee Structure <i class="fa-regular fa-angles-right"></i></a>
-                <a href="" class="px-3 py-2 text-xs font-medium text-center text-white bg-reds rounded-lg hover:bg-blue-800 focus:ring-0 focus:outline-none">Admission <i class="fa-regular fa-angles-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    
-      <!-- Logo Section -->
-      <div class="logosection lg:px-0 px-4">
-        <div class="flex items-center lg:justify-center justify-between gap-4 py-1">
-          <img class="logo" src="images/logo.png">
-          <h1 class="text-black text-4xl text-center font-fm font-bold lg:block hidden">
-            Jitender veer Sarvhitkari Model <br> Senior Secondary School  
-          </h1>
-          <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-blue-800 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-dropdown">
-            <span class="sr-only">Open main menu</span>
-            <svg class="w-5 h-5 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-            </svg>
-          </button>
-        </div>
-      </div>
-    
-      <!-- Menu Section -->
-      <div class="menu bg-blue-900 lg:py-1 py-0">
-        <nav class="border-gray-200 ">
-          <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
-            <div class="hidden mx-auto w-full md:block md:w-auto" id="navbar-dropdown">
-              <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
-                <li class="hover:bg-red-500 p-2 rounded-lg bg-red-500">
-                  <a href="#" class="block text-white font-normal">Home</a>
-                </li>
-    
-                <!-- About Us Dropdown -->
-                <li class="hover:bg-red-500 p-2 rounded-lg group relative">
-                  <button onclick="toggleSubmenu('about-us')" class="flex items-center justify-between w-full text-white font-normal cursor-pointer">
-                    About Us 
-                    <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                    </svg>
-                  </button>
-                  <div id="about-us" class="absolute left-0 top-10 z-50 hidden group-hover:block md:group-hover:block font-normal bg-blue-900 divide-y divide-gray-100 rounded-lg w-44">
-                    <ul class="py-2 text-sm text-white">
-                      <li><a href="#" class="block px-4 py-2 hover:bg-red-500 hover:bg-blue-500">Our Message</a></li>
-                      <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Our Faculty</a></li> 
-                    </ul>
-                  </div>
-                </li>
-    
-                <!-- Admissions Dropdown -->
-                <li class="hover:bg-red-500 p-2 rounded-lg group relative">
-                  <button onclick="toggleSubmenu('admissions')" class="flex items-center justify-between w-full text-white font-normal cursor-pointer">
-                    Admissions
-                    <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                    </svg>
-                  </button>
-                  <div id="admissions" class="absolute left-0 top-10 z-50 hidden group-hover:block md:group-hover:block font-normal bg-blue-900 divide-y divide-gray-100 rounded-lg w-44">
-                    <ul class="py-2 text-sm text-white">
-                      <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Admission Procedure</a></li>
-                      <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Admission Form</a></li> 
-                      <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Fee Structure</a></li> 
-                    </ul>
-                  </div>
-                </li>
-    
-                <!-- Academics Dropdown -->
-                <li class="hover:bg-red-500 p-2 rounded-lg group relative">
-                  <button onclick="toggleSubmenu('academics')" class="flex items-center justify-between w-full text-white font-normal cursor-pointer">
-                    Academics
-                    <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                    </svg>
-                  </button>
-                  <div id="academics" class="absolute left-0 top-10 z-50 hidden group-hover:block md:group-hover:block font-normal bg-blue-900 divide-y divide-gray-100 rounded-lg w-44">
-                    <ul class="py-2 text-sm text-white">
-                      <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Balvatika</a></li>
-                      <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Primary</a></li> 
-                      <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Secondary</a></li> 
-                      <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Senior Secondary</a></li> 
-                    </ul>
-                  </div>
-                </li>
-    
-                <!-- Other Menu Items -->
-                <li class="hover:bg-red-500 p-2 rounded-lg">
-                  <a href="#" class="block text-white font-normal">School Club</a>
-                </li>
-                <li class="hover:bg-red-500 p-2 rounded-lg">
-                  <a href="#" class="block text-white font-normal">Gallery</a>
-                </li>
-                <li class="hover:bg-red-500 p-2 rounded-lg">
-                  <a href="#" class="block text-white font-normal">Mandatory Public Disclosure</a>
-                </li>
-                <li class="hover:bg-red-500 p-2 rounded-lg">
-                  <a href="#" class="block text-white font-normal">Contact Us</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    
-    
-
-
-    <section class="hero">
-      <div class="">
-         
-
-<div id="default-carousel" class="relative w-full" data-carousel="slide">
-   <!-- Carousel wrapper -->
-   <div class="relative h-56 overflow-hidden   md:h-120">
-    
-        <!-- Item 1 -->
-        <div class="hidden duration-[2000ms] ease-in-out" data-carousel-item>
-           <img src="images/slide-1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-           <div class="absolute left-1/2 bottom-5 -translate-x-1/2  p-5 rounded-lg" style="background-color: #1c398e8f">
-            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center font-fm">
-               Lorem Ipsum
-             </h2>
-             
-             
-        </div>
-        
-       </div>
-       <!-- Item 2 -->
-       <div class="hidden duration-[2000ms] ease-in-out" data-carousel-item>
-           <img src="images/slide-2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-           <div class="absolute left-1/2 bottom-5 -translate-x-1/2  p-5 rounded-lg" style="background-color: #1c398e8f">
-            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center font-fm">
-               Lorem Ipsum
-             </h2>
-             
-             
-        </div>
-       </div>
-
-
-        
-
-        <!-- Item 3 -->
-        <div class="hidden duration-[2000ms] ease-in-out" data-carousel-item>
-          <img src="images/slide-3.avif" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-          <div class="absolute left-1/2 bottom-5 -translate-x-1/2  p-5 rounded-lg" style="background-color: #1c398e8f">
-           <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center font-fm">
-              Lorem Ipsum
-            </h2>
-           
-            
-       </div>
-      </div>
-
-       <!-- Item 4 -->
-       <div class="hidden duration-[2000ms] ease-in-out" data-carousel-item>
-        <img src="images/slide-4.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        <div class="absolute left-1/2 bottom-5 -translate-x-1/2  p-5 rounded-lg" style="background-color: #1c398e8f">
-         <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center font-fm">
-            Lorem Ipsum
-          </h2>
-          
-          
-     </div>
-    </div>
-        
-   </div>
-   <!-- Slider indicators -->
- 
-   <!-- Slider controls -->
-   <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-       <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30   group-hover:bg-white/50   group-focus:ring-4 group-focus:ring-white   group-focus:outline-none">
-           <svg class="w-4 h-4 text-white  rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-           </svg>
-           <span class="sr-only">Previous</span>
-       </span>
-   </button>
-   <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-       <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30   group-hover:bg-white/50  group-focus:ring-4 group-focus:ring-white   group-focus:outline-none">
-           <svg class="w-4 h-4 text-white   rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-           </svg>
-           <span class="sr-only">Next</span>
-       </span>
-   </button>
-</div>
-
-      </div>
-    </section>
-
-    <section class="py-20 lg:px-0 px-4">
-      <div class="max-w-screen-xl mx-auto">
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-              <!-- Image Section -->
-              <div class="flex flex-col h-full">
-                  <div class="cursor-pointer relative overflow-hidden rounded-md shadow">
-                      <img alt="" class="w-full h-100 object-cover scale-125 group-hover:scale-100 duration-500" src="images/hm.jpg">
-                      <div class="absolute inset-0 bg-gradient-to-b to-slate-900 from-transparent opacity-0 group-hover:opacity-100 duration-500"></div>
-                  </div>
-              </div>
-  
-              <!-- Message from Principal -->
-              <div class="flex flex-col h-full">
-                  <h2 class="mb-3 text-3xl font-bold tracking-tight font-fm text-left">Message From Principal</h2>
-                  <div class="h-2 rounded-xl w-15 bg-red-500"></div>
-                  <p class="mt-8">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
-                  <h3 class="text-red-500 font-fm text-xl font-semibold mt-8">-- Name of Principal</h3>
-              </div>
-  
-              <!-- Announcements -->
-              <div>
-                  <div class="bg-gray-100 p-5 rounded-lg flex flex-col h-full">
-                      <h2 class="mb-3 text-3xl font-bold tracking-tight font-fm text-left">Announcements</h2>
-                      <marquee width="100%" direction="up" height="75%">
-                          New session begins from 1st April 2025.<br>
-                          Admissions open For Nur – Class 12.<br>
-                          Admissions open For Hostel 6th Class onwards.<br>
-                          Join NCC Junior Division: Classes 8-9.<br>
-                          Join NCC Senior Division/Wing: Classes 11-12.<br>
-                          No Admission Charges (Early Bird Scheme).<br>
-                      </marquee>
-
-                      <button type="button" class="mt-5 text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-3.5 me-2 mb-2 block w-fit">
-                        View All Announcements <i class="fa-sharp fa-regular fa-arrow-right"></i>
-                      </button>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
-
-
-  <section class="py-30 lg:px-0 px-4 relative bg-bottom bg-cover" style="background-image: url(/images/school-bg.jpg);  ">
-    <div class="absolute inset-0 bg-blue-900 opacity-60"></div>
-    <div class="max-w-screen-xl mx-auto relative z-10">
-      <h2 class="mb-3 text-3xl font-bold tracking-tight text-white font-fm text-left">Our Schools</h2>
-      <div class="h-1 rounded-xl w-15 bg-white"></div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-2 gap-0 mt-8">
-
-          <div class="ss group relative m-2 overflow-hidden cursor-pointer">
-            <div class="cursor-pointer relative overflow-hidden rounded-md shadow   bg-white p-1 ">
-                <img alt="" class="w-full h-72 object-cover rounded-lg   bg-white " src="images/s1.jpg">
-                 <div class="py-2">
-                  <h3 class="text-2xl font-bold font-fm text-center text-blue-900">Balvatika School</h3>
-                  <p class="text-center">Pre-Nursery to 1st Class</p>
-                 </div>  
-            </div>
-          </div>
-
-          <div class="ss group relative m-2 overflow-hidden cursor-pointer">
-            <div class="cursor-pointer relative overflow-hidden rounded-md shadow   bg-white p-1 ">
-                <img alt="" class="w-full h-72 object-cover rounded-lg   bg-white " src="images/s2.jpg">
-                 <div class="py-2">
-                  <h3 class="text-2xl font-bold font-fm text-center text-blue-900">Primary School</h3>
-                  <p class="text-center">2nd to 5th class</p>
-                 </div>  
-            </div>
-          </div>
-
-          <div class="ss group relative m-2 overflow-hidden cursor-pointer">
-            <div class="cursor-pointer relative overflow-hidden rounded-md shadow   bg-white p-1 ">
-                <img alt="" class="w-full h-72 object-cover rounded-lg   bg-white " src="images/s3.jpg">
-                 <div class="py-2">
-                  <h3 class="text-2xl font-bold font-fm text-center text-blue-900">Secondary School</h3>
-                  <p class="text-center">6th to 8th class</p>
-                 </div>  
-            </div>
-          </div>
-
-          <div class="ss group relative m-2 overflow-hidden cursor-pointer">
-            <div class="cursor-pointer relative overflow-hidden rounded-md shadow   bg-white p-1 ">
-                <img alt="" class="w-full h-72 object-cover rounded-lg   bg-white " src="images/s4.jpg">
-                 <div class="py-2">
-                  <h3 class="text-2xl font-bold font-fm text-center text-blue-900">Senior Secondary</h3>
-                  <p class="text-center">9th to 12th class</p>
-                 </div>  
-            </div>
-          </div>
-
-
-          </div>
-          </section>
-
-
-          <section class="py-20">
-            <div class="max-w-screen-xl mx-auto "> 
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-4 gap-3 mt-8">
-
-                <div class="text-center bg-gray-50 p-5 py-8 flex flex-col h-full shadow-sm transform transition duration-300 hover:scale-105">
-                  <i class="fa-regular fa-bullseye-arrow text-7xl text-red-500"></i>
-                  <h3 class="font-fm text-3xl font-semibold text-blue-900 py-4">Our Mission</h3>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  
-                  </p>
-              </div>
-              
-
-              <div class="text-center bg-gray-50 p-5 py-8 flex flex-col h-full shadow-sm transform transition duration-300 hover:scale-105">
-                    <i class="fa-sharp fa-solid fa-eye text-7xl text-red-500"></i>
-                    <h3 class="font-fm text-3xl font-semibold text-blue-900 py-4">Our Vision</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  
-                    </p>
-                  </div>
-                
-                  <div class="text-center bg-gray-50 p-5 py-8 flex flex-col h-full shadow-sm transform transition duration-300 hover:scale-105">
-                    <i class="fa-solid fa-hands-holding-diamond text-7xl text-red-500"></i>
-                    <h3 class="font-fm text-3xl font-semibold text-blue-900 py-4">Our Values</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  
-                    </p>
-                  </div>
-                  
-                </div>
-          
-          </div>
-          </section>
-
-  
-    
-    <section class="py-20">
-        <div class="max-w-screen-xl m-auto">
-          <h2 class="mb-3 text-3xl font-bold tracking-tight   font-fm text-center">Reasons To Join Sarvhitkari</h2>
-          <div class="h-2 rounded-xl w-15 bg-red-500 mx-auto"></div>
-
-
-          <div class="grid lg:grid-cols-4 grid-cols-1 my-10 lg:gap-2 gap-0">
-            
-
-            <div class="ss group relative m-2 overflow-hidden cursor-pointer">
-              <div class="cursor-pointer relative overflow-hidden rounded-md shadow  ">
-                  <img alt="" class="w-full h-72 object-cover scale-125 group-hover:scale-100 duration-500" src="images/ss-1.jpg">
-                  <div class="absolute inset-0 bg-gradient-to-b to-slate-900 from-transparent opacity-0 group-hover:opacity-100 duration-500"></div>
-                  <div class="absolute p-4 bottom-0 start-0">
-                      <a class="text-lg font-medium text-white hover:text-blue duration-500 ease-in-out bg-red-500 px-2 py-1 rounded-md">Attentions to sports</a>
-                  </div>
-              </div>
-          
-              <!-- Hidden Text - Shows on Hover -->
-              <div class="absolute top-0 h-full left-0 w-full bg-blue-900 text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-lg rounded-md">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et.
-              </div>
-          </div>
-
-            
-            <div class="ss group relative m-2 overflow-hidden cursor-pointer">
-              <div class="cursor-pointer relative overflow-hidden rounded-md shadow  ">
-                  <img alt="" class="w-full h-72 object-cover scale-125 group-hover:scale-100 duration-500" src="images/ss-2.jpg">
-                  <div class="absolute inset-0 bg-gradient-to-b to-slate-900 from-transparent opacity-0 group-hover:opacity-100 duration-500"></div>
-                  <div class="absolute p-4 bottom-0 start-0">
-                      <a class="text-lg font-medium text-white hover:text-blue duration-500 ease-in-out bg-red-500 px-2 py-1 rounded-md">Skilled Faculty</a>
-                  </div>
-              </div>
-          
-              <!-- Hidden Text - Shows on Hover -->
-              <div class="absolute top-0 h-full left-0 w-full bg-blue-900 text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-lg rounded-md">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et.
-              </div>
-          </div>
-            
-
-            <div class="ss group relative m-2 overflow-hidden cursor-pointer">
-              <div class="cursor-pointer relative overflow-hidden rounded-md shadow  ">
-                  <img alt="" class="w-full h-72 object-cover scale-125 group-hover:scale-100 duration-500" src="images/ss-3.jpg">
-                  <div class="absolute inset-0 bg-gradient-to-b to-slate-900 from-transparent opacity-0 group-hover:opacity-100 duration-500"></div>
-                  <div class="absolute p-4 bottom-0 start-0">
-                      <a class="text-lg font-medium text-white hover:text-blue duration-500 ease-in-out bg-red-500 px-2 py-1 rounded-md">Well Equipped La</a>
-                  </div>
-              </div>
-          
-              <!-- Hidden Text - Shows on Hover -->
-              <div class="absolute top-0 h-full left-0 w-full bg-blue-900 text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-lg rounded-md">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et.
-              </div>
-          </div>
-
-            <div class="ss group relative m-2 overflow-hidden cursor-pointer">
-              <div class="cursor-pointer relative overflow-hidden rounded-md shadow  ">
-                  <img alt="" class="w-full h-72 object-cover scale-125 group-hover:scale-100 duration-500" src="images/ss-4.jpg">
-                  <div class="absolute inset-0 bg-gradient-to-b to-slate-900 from-transparent opacity-0 group-hover:opacity-100 duration-500"></div>
-                  <div class="absolute p-4 bottom-0 start-0">
-                      <a class="text-lg font-medium text-white hover:text-blue duration-500 ease-in-out bg-red-500 px-2 py-1 rounded-md">NCC</a>
-                  </div>
-              </div>
-          
-              <!-- Hidden Text - Shows on Hover -->
-              <div class="absolute top-0 h-full left-0 w-full bg-blue-900 text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-lg rounded-md">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et.
-              </div>
-          </div>
-          
-             
-         </div>
-        </div>
-    </section>
-
-    <section class="py-20  bg-blue-100 bg-cover bg-center " style="background-image: url('images/bg.jpg'); position: relative;">
-      <div class="absolute inset-0 bg-black opacity-50"></div>
-      <div class="max-w-screen-xl m-auto lg:px-0 px-4 z-20 relative"> 
-        <h2 class="mb-3 text-3xl font-bold tracking-tight text-white  font-fm text-center">Shining Stars Of Our School</h2>
-          <div class="h-2 rounded-xl w-15 bg-red-500 mx-auto mb-8"></div> 
-        <div id="multi-carousel" class="relative w-full overflow-hidden">
-          <!-- Carousel wrapper -->
-          <div class="flex transition-transform duration-700 ease-in-out " id="carousel-inner">
-              <!-- Item 1 -->
-              <div class="w-1/3 flex-shrink-0 bg-white p-3bg-white p-3 ">
-                  <img src="images/slide-1.jpg" class="w-full h-96 object-cover " alt="...">
-                  <h2 class="text-center pt-2 text-2xl font-semibold text-blue-900">Amrinder (98%)</h2>
-                  <p class="text-xl text-center">Class: 8th</p>
-              </div>
-              <!-- Item 2 -->
-              <div class="w-1/3 flex-shrink-0 bg-white p-3">
-                  <img src="images/stu-1.jpg" class="w-full h-96 object-cover " alt="...">
-                  <h2 class="text-center pt-2 text-2xl font-semibold text-blue-900">Deepak (92%)</h2>
-                  <p class="text-xl text-center">Class: 10th</p>
-              </div>
-              <!-- Item 3 -->
-              <div class="w-1/3 flex-shrink-0 bg-white p-3">
-                  <img src="images/slide-3.avif" class="w-full h-96 object-cover " alt="...">
-                  <h2 class="text-center pt-2 text-2xl font-semibold text-blue-900">Neeshu (98%)</h2>
-                  <p class="text-xl text-center">Class: 8th</p>
-              </div>
-              <!-- Item 4 -->
-              <div class="w-1/3 flex-shrink-0 bg-white p-3">
-                  <img src="images/stu-2.jpg" class="w-full h-96 object-cover " alt="...">
-                  <h2 class="text-center pt-2 text-2xl font-semibold text-blue-900">Amandeep (88%)</h2>
-                  <p class="text-xl text-center">Class: 10th</p>
-              </div>
-              <!-- Item 5 -->
-              
-          </div>
-      
-          <!-- Slider controls -->
-          <button id="prev-slide"  class="cursor-pointer absolute top-1/2 w-10 h-10 flex items-center justify-center start-0 z-30 transform -translate-y-1/2 p-4 bg-blue-800 text-white rounded-full">
-            <i class="fa-solid fa-angle-left"></i>
-          </button>
-          <button id="next-slide" class="cursor-pointer absolute top-1/2 w-10 h-10 flex items-center justify-center end-0 z-30 transform -translate-y-1/2 p-4 bg-blue-800 text-white rounded-full">
-            <i class="fa-solid fa-angle-right"></i>
-          </button>
-      </div>
-      
-     
-      
-        </div>
-        </section>
-
-    <section class="py-20 bg-gray-100">
-      <div class="max-w-screen-xl m-auto lg:px-0 px-4"> 
-        
-        <a href="#" class="flex flex-col md:flex-row items-center bg-white border border-gray-200 rounded-lg shadow-sm w-full overflow-hidden">
-          <!-- Image Section (50%) -->
-           <div class="lg:w-1/2 w-full overflow-hidden">
-            <img class="object-cover  h-96 md:h-auto transition-transform duration-300 ease-in-out hover:scale-110" 
-            src="images/teachers.jpg" alt="">
-           </div>
-          
-        
-          <!-- Content Section (50%) -->
-          <div class="lg:w-1/2 w-full flex flex-col justify-between p-4 leading-normal">
-            <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-3.5 py-1.5 rounded-sm   w-fit">News</span>
-            <h5 class="my-2 text-3xl font-bold tracking-tight text-gray-900   font-fm">Sarvhitkari Model
-              Senior Secondary </h5>
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900   font-fm">Admissions Open</h5>
-            <p class="mb-3 font-normal text-gray-700  ">Admission Open for 2025-26 session from Nursery to 12th without admission fee</p>
-            <button type="button" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-3.5 me-2 mb-2 block w-fit">
-              Enroll Now <i class="fa-sharp fa-regular fa-arrow-right"></i>
-            </button>
-          </div>
-        </a>
-        
-        
-
-
-      </div>
-    </section>
-
-
-    <section class="footer bg-blue-900">
-      <div class="container mx-auto px-4">
-         <footer class="relative z-10 bg-blue-900 text-white pt-10">
-            <div class="container mx-auto">
-               <div class="flex flex-wrap ">
-                  <div class="w-full px-4 sm:w-2/3 lg:w-3/12">
-                     <div class="w-full mb-10">
-                        <a href=" " class="flex items-center space-x-3 rtl:space-x-reverse mb-5">
-                          <img class="logo" src="images/logo-footer.png" alt=""></a>
-                        <p class="text-base text-body-color   mb-7">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
-                        
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Sarvhitkari School</title>
+      <link rel="icon" type="image/x-icon" href="images/favicon.png">
+      <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+      <link rel="stylesheet" href="css/custom.css">
+      <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.5.2/css/pro.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+   </head>
+   <body>
+      <header>
+         <!-- Top Bar -->
+         <div class="topBar bg-blue-900 text-white py-1">
+            <div class="max-w-screen-xl m-auto">
+               <div class="lg:flex row flex-wrap justify-between items-center">
+                  <div class="lg:w-7/12 px-5 text-left">
+                     <div class="flex items-center gap-8">
+                        <span class="flex items-center gap-2">
+                        <i class="fa-solid fa-phone mt-1"></i> 0123456779
+                        </span>
+                        <span class="flex items-center gap-2">
+                        <i class="fa-solid fa-envelope mt-1"></i> example@email.com
+                        </span>
                      </div>
                   </div>
-                  <div class="w-full px-4 sm:w-1/2 lg:w-2/12">
-                     <div class="w-full mb-10">
-                        <h4 class="text-lg font-semibold text-dark  text-yellow-300 mb-9">Quick Links</h4>
-                        <ul class="space-y-3"> 
-                           <li><a class="inline-block text-base leading-loose text-body-color  " href="/">Our Message</a></li>
-                           <li><a class="inline-block text-base leading-loose text-body-color  " href="/">Our Faculty</a></li>
-                           <li><a class="inline-block text-base leading-loose text-body-color  " href="/">School Club</a></li>
-                           <li><a class="inline-block text-base leading-loose text-body-color  " href="/">Gallery</a></li>
-                           <li><a class="inline-block text-base leading-loose text-body-color  " href="/">Mandatory Public Disclosure</a></li>
-                          
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="w-full px-4 sm:w-1/2 lg:w-2/12">
-                     <div class="w-full mb-10">
-                        <h4 class="text-lg font-semibold text-dark text-yellow-300 mb-9"> Admissions</h4>
-                        <ul class="space-y-3">
-                          
-                          <li><a class="inline-block text-base leading-loose text-body-color  " href="/">Admission Procedure</a></li>
-                          <li><a class="inline-block text-base leading-loose text-body-color  " href="/">Admission Form</a></li>
-                          <li><a class="inline-block text-base leading-loose text-body-color hover:text-primary  " href="/">Fee Structure</a></li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="w-full px-4 sm:w-1/2 lg:w-2/12">
-                     <div class="w-full mb-10">
-                        <h4 class="text-lg font-semibold text-dark text-yellow-300 mb-9">
-                          Academics
-                         </h4>
-                        <ul class="space-y-3">
-                           <li><a class="inline-block text-base leading-loose text-body-color hover:text-primary  " href="/">Balvatika</a></li>
-                           <li><a class="inline-block text-base leading-loose text-body-color hover:text-primary  " href="/">Primary</a></li>
-                           <li><a class="inline-block text-base leading-loose text-body-color hover:text-primary  " href="/">Secondary</a></li>
-                           <li><a class="inline-block text-base leading-loose text-body-color hover:text-primary  " href="/">Senior Secondary</a></li> 
-                        </ul>
-                     </div>
-                  </div>
-                  <div class="w-full px-4 sm:w-1/2 lg:w-3/12">
-                     <div class="w-full mb-10">
-                        <h4 class="text-lg font-semibold text-dark text-yellow-300 mb-9">Get all the information</h4>
-                        <div class="lg:ms-8">
-                          
-                           
-                          <div class="flex mt-4">
-                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin size-4 text-yellow-300 me-2 mt-1">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                             </svg>
-                             <div class="">
-                                <h6 class="text-white ">P.O. Box # 322 <br> 5 Sicomac Rd, Suite 6<br>North Haledon, NJ 07508</h6>
-                             </div>
-                          </div>
-                          <div class="flex mt-4">
-                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail size-4 text-yellow-300 me-2 mt-1">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                             </svg>
-                             <div class=""><a href="mailto:admistion@school.com" class="text-white  hover:text-slate-400 duration-500 ease-in-out">admistion@school.com</a></div>
-                          </div>
-                          <div class="flex mt-4">
-                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone size-4 text-yellow-300 me-2 mt-1">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                             </svg>
-                             <div class=""><a href="tel:(973) 636-6660" class="text-white  hover:text-slate-400 duration-500 ease-in-out">+91 123456789</a></div>
-                          </div>
-                       </div> 
-                        
+                  <div class="lg:w-5/12 px-5 text-right hidden lg:block">
+                     <div class="flex items-center justify-end gap-2">
+                        <a href="" class="px-3 py-2 text-xs font-medium text-center text-white bg-reds rounded-lg hover:bg-blue-800 focus:ring-0 focus:outline-none">Fee Structure <i class="fa-regular fa-angles-right"></i></a>
+                        <a href="" class="px-3 py-2 text-xs font-medium text-center text-white bg-reds rounded-lg hover:bg-blue-800 focus:ring-0 focus:outline-none">Admission <i class="fa-regular fa-angles-right"></i></a>
                      </div>
                   </div>
                </div>
             </div>
-            <div>
-               <span class="absolute left-0 bottom-0 z-[-1]">
-                  <svg width="217" height="229" viewBox="0 0 217 229" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M-64 140.5C-64 62.904 -1.096 1.90666e-05 76.5 1.22829e-05C154.096 5.49924e-06 217 62.904 217 140.5C217 218.096 154.096 281 76.5 281C-1.09598 281 -64 218.096 -64 140.5Z" fill="url(#paint0_linear_1179_5)"></path>
-                     <defs>
-                        <linearGradient id="paint0_linear_1179_5" x1="76.5" y1="281" x2="76.5" y2="1.22829e-05" gradientUnits="userSpaceOnUse">
-                           <stop stop-color="#3056D3" stop-opacity="0.08"></stop>
-                           <stop offset="1" stop-color="#C4C4C4" stop-opacity="0"></stop>
-                        </linearGradient>
-                     </defs>
+         </div>
+         <!-- Logo Section -->
+         <div class="logosection lg:px-0 px-4">
+            <div class="flex items-center lg:justify-center justify-between gap-4 py-1">
+               <img class="logo" src="images/logo.png">
+               <h1 class="text-black text-4xl text-center font-fm font-bold lg:block hidden">
+                  Jitender veer Sarvhitkari Model <br> Senior Secondary School  
+               </h1>
+               <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-blue-800 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-dropdown">
+                  <span class="sr-only">Open main menu</span>
+                  <svg class="w-5 h-5 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
                   </svg>
-               </span>
-               <span class="absolute top-10 right-10 z-[-1]">
-                  <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M37.5 -1.63918e-06C58.2107 -2.54447e-06 75 16.7893 75 37.5C75 58.2107 58.2107 75 37.5 75C16.7893 75 -7.33885e-07 58.2107 -1.63918e-06 37.5C-2.54447e-06 16.7893 16.7893 -7.33885e-07 37.5 -1.63918e-06Z" fill="url(#paint0_linear_1179_4)"></path>
-                     <defs>
-                        <linearGradient id="paint0_linear_1179_4" x1="-1.63917e-06" y1="37.5" x2="75" y2="37.5" gradientUnits="userSpaceOnUse">
-                           <stop stop-color="#13C296" stop-opacity="0.31"></stop>
-                           <stop offset="1" stop-color="#C4C4C4" stop-opacity="0"></stop>
-                        </linearGradient>
-                     </defs>
-                  </svg>
-               </span>
+               </button>
             </div>
-         </footer>
+         </div>
+         <!-- Menu Section -->
+         <div class="menu bg-blue-900 lg:py-1 py-0">
+            <nav class="border-gray-200 ">
+               <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
+                  <div class="hidden mx-auto w-full md:block md:w-auto" id="navbar-dropdown">
+                     <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+                        <li class="hover:bg-red-500 p-2 rounded-lg bg-red-500">
+                           <a href="#" class="block text-white font-normal">Home</a>
+                        </li>
+                        <!-- About Us Dropdown -->
+                        <li class="hover:bg-red-500 p-2 rounded-lg group relative">
+                           <button onclick="toggleSubmenu('about-us')" class="flex items-center justify-between w-full text-white font-normal cursor-pointer">
+                              About Us 
+                              <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                              </svg>
+                           </button>
+                           <div id="about-us" class="absolute left-0 top-10 z-50 hidden group-hover:block md:group-hover:block font-normal bg-blue-900 divide-y divide-gray-100 rounded-lg w-44">
+                              <ul class="py-2 text-sm text-white">
+                                 <li><a href="#" class="block px-4 py-2 hover:bg-red-500 hover:bg-blue-500">Our Message</a></li>
+                                 <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Our Faculty</a></li>
+                              </ul>
+                           </div>
+                        </li>
+                        <!-- Admissions Dropdown -->
+                        <li class="hover:bg-red-500 p-2 rounded-lg group relative">
+                           <button onclick="toggleSubmenu('admissions')" class="flex items-center justify-between w-full text-white font-normal cursor-pointer">
+                              Admissions
+                              <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                              </svg>
+                           </button>
+                           <div id="admissions" class="absolute left-0 top-10 z-50 hidden group-hover:block md:group-hover:block font-normal bg-blue-900 divide-y divide-gray-100 rounded-lg w-44">
+                              <ul class="py-2 text-sm text-white">
+                                 <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Admission Procedure</a></li>
+                                 <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Admission Form</a></li>
+                                 <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Fee Structure</a></li>
+                              </ul>
+                           </div>
+                        </li>
+                        <!-- Academics Dropdown -->
+                        <li class="hover:bg-red-500 p-2 rounded-lg group relative">
+                           <button onclick="toggleSubmenu('academics')" class="flex items-center justify-between w-full text-white font-normal cursor-pointer">
+                              Academics
+                              <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                              </svg>
+                           </button>
+                           <div id="academics" class="absolute left-0 top-10 z-50 hidden group-hover:block md:group-hover:block font-normal bg-blue-900 divide-y divide-gray-100 rounded-lg w-44">
+                              <ul class="py-2 text-sm text-white">
+                                 <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Balvatika</a></li>
+                                 <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Primary</a></li>
+                                 <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Secondary</a></li>
+                                 <li><a href="#" class="block px-4 py-2 hover:bg-red-500">Senior Secondary</a></li>
+                              </ul>
+                           </div>
+                        </li>
+                        <!-- Other Menu Items -->
+                        <li class="hover:bg-red-500 p-2 rounded-lg">
+                           <a href="#" class="block text-white font-normal">School Club</a>
+                        </li>
+                        <li class="hover:bg-red-500 p-2 rounded-lg">
+                           <a href="#" class="block text-white font-normal">Gallery</a>
+                        </li>
+                        <li class="hover:bg-red-500 p-2 rounded-lg">
+                           <a href="#" class="block text-white font-normal">Mandatory Public Disclosure</a>
+                        </li>
+                        <li class="hover:bg-red-500 p-2 rounded-lg">
+                           <a href="#" class="block text-white font-normal">Contact Us</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </nav>
+         </div>
+      </header>
+      <section class="hero">
+         <div class="">
+            <div id="default-carousel" class="relative w-full" data-carousel="slide">
+               <!-- Carousel wrapper -->
+               <div class="relative h-56 overflow-hidden   md:h-120">
+                  <!-- Item 1 -->
+                  <div class="hidden duration-[2000ms] ease-in-out" data-carousel-item>
+                     <img src="images/slide-1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                     <div class="absolute left-1/2 bottom-5 -translate-x-1/2  p-5 rounded-lg" style="background-color: #1c398e8f">
+                        <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center font-fm">
+                           Lorem Ipsum
+                        </h2>
+                     </div>
+                  </div>
+                  <!-- Item 2 -->
+                  <div class="hidden duration-[2000ms] ease-in-out" data-carousel-item>
+                     <img src="images/slide-2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                     <div class="absolute left-1/2 bottom-5 -translate-x-1/2  p-5 rounded-lg" style="background-color: #1c398e8f">
+                        <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center font-fm">
+                           Lorem Ipsum
+                        </h2>
+                     </div>
+                  </div>
+                  <!-- Item 3 -->
+                  <div class="hidden duration-[2000ms] ease-in-out" data-carousel-item>
+                     <img src="images/slide-3.avif" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                     <div class="absolute left-1/2 bottom-5 -translate-x-1/2  p-5 rounded-lg" style="background-color: #1c398e8f">
+                        <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center font-fm">
+                           Lorem Ipsum
+                        </h2>
+                     </div>
+                  </div>
+                  <!-- Item 4 -->
+                  <div class="hidden duration-[2000ms] ease-in-out" data-carousel-item>
+                     <img src="images/slide-4.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                     <div class="absolute left-1/2 bottom-5 -translate-x-1/2  p-5 rounded-lg" style="background-color: #1c398e8f">
+                        <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center font-fm">
+                           Lorem Ipsum
+                        </h2>
+                     </div>
+                  </div>
+               </div>
+               <!-- Slider indicators -->
+               <!-- Slider controls -->
+               <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                  <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30   group-hover:bg-white/50   group-focus:ring-4 group-focus:ring-white   group-focus:outline-none">
+                     <svg class="w-4 h-4 text-white  rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                     </svg>
+                     <span class="sr-only">Previous</span>
+                  </span>
+               </button>
+               <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                  <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30   group-hover:bg-white/50  group-focus:ring-4 group-focus:ring-white   group-focus:outline-none">
+                     <svg class="w-4 h-4 text-white   rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                     </svg>
+                     <span class="sr-only">Next</span>
+                  </span>
+               </button>
+            </div>
+         </div>
+      </section>
+      <section class="py-20 lg:px-0 px-4">
+         <div class="max-w-screen-xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+               <!-- Image Section -->
+               <div class="flex flex-col h-full">
+                  <div class="cursor-pointer relative overflow-hidden rounded-md shadow">
+                     <img alt="" class="w-full h-100 object-cover scale-125 group-hover:scale-100 duration-500" src="images/hm.jpg">
+                     <div class="absolute inset-0 bg-gradient-to-b to-slate-900 from-transparent opacity-0 group-hover:opacity-100 duration-500"></div>
+                  </div>
+               </div>
+               <!-- Message from Principal -->
+               <div class="flex flex-col h-full">
+                  <h2 class="mb-3 text-3xl font-bold tracking-tight font-fm text-left">Message From Principal</h2>
+                  <div class="h-2 rounded-xl w-15 bg-red-500"></div>
+                  <p class="mt-8">
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                  <h3 class="text-red-500 font-fm text-xl font-semibold mt-8">-- Name of Principal</h3>
+               </div>
+               <!-- Announcements -->
+               <div>
+                  <div class="bg-gray-100 p-5 rounded-lg flex flex-col h-full">
+                     <h2 class="mb-3 text-3xl font-bold tracking-tight font-fm text-left">Announcements</h2>
+                     <marquee width="100%" direction="up" height="75%">
+                        New session begins from 1st April 2025.<br>
+                        Admissions open For Nur – Class 12.<br>
+                        Admissions open For Hostel 6th Class onwards.<br>
+                        Join NCC Junior Division: Classes 8-9.<br>
+                        Join NCC Senior Division/Wing: Classes 11-12.<br>
+                        No Admission Charges (Early Bird Scheme).<br>
+                     </marquee>
+                     <button type="button" class="mt-5 text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-3.5 me-2 mb-2 block w-fit">
+                     View All Announcements <i class="fa-sharp fa-regular fa-arrow-right"></i>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="py-30 lg:px-0 px-4 relative bg-bottom bg-cover" style="background-image: url(/images/school-bg.jpg);  ">
+         <div class="absolute inset-0 bg-blue-900 opacity-60"></div>
+         <div class="max-w-screen-xl mx-auto relative z-10">
+         <h2 class="mb-3 text-3xl font-bold tracking-tight text-white font-fm text-left">Our Schools</h2>
+         <div class="h-1 rounded-xl w-15 bg-white"></div>
+         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-2 gap-0 mt-8">
+            <div class="ss group relative m-2 overflow-hidden cursor-pointer">
+               <div class="cursor-pointer relative overflow-hidden rounded-md shadow   bg-white p-1 ">
+                  <img alt="" class="w-full h-72 object-cover rounded-lg   bg-white " src="images/s1.jpg">
+                  <div class="py-2">
+                     <h3 class="text-2xl font-bold font-fm text-center text-blue-900">Balvatika School</h3>
+                     <p class="text-center">Pre-Nursery to 1st Class</p>
+                  </div>
+               </div>
+            </div>
+            <div class="ss group relative m-2 overflow-hidden cursor-pointer">
+               <div class="cursor-pointer relative overflow-hidden rounded-md shadow   bg-white p-1 ">
+                  <img alt="" class="w-full h-72 object-cover rounded-lg   bg-white " src="images/s2.jpg">
+                  <div class="py-2">
+                     <h3 class="text-2xl font-bold font-fm text-center text-blue-900">Primary School</h3>
+                     <p class="text-center">2nd to 5th class</p>
+                  </div>
+               </div>
+            </div>
+            <div class="ss group relative m-2 overflow-hidden cursor-pointer">
+               <div class="cursor-pointer relative overflow-hidden rounded-md shadow   bg-white p-1 ">
+                  <img alt="" class="w-full h-72 object-cover rounded-lg   bg-white " src="images/s3.jpg">
+                  <div class="py-2">
+                     <h3 class="text-2xl font-bold font-fm text-center text-blue-900">Secondary School</h3>
+                     <p class="text-center">6th to 8th class</p>
+                  </div>
+               </div>
+            </div>
+            <div class="ss group relative m-2 overflow-hidden cursor-pointer">
+               <div class="cursor-pointer relative overflow-hidden rounded-md shadow   bg-white p-1 ">
+                  <img alt="" class="w-full h-72 object-cover rounded-lg   bg-white " src="images/s4.jpg">
+                  <div class="py-2">
+                     <h3 class="text-2xl font-bold font-fm text-center text-blue-900">Senior Secondary</h3>
+                     <p class="text-center">9th to 12th class</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="py-20">
+         <div class="max-w-screen-xl mx-auto ">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-4 gap-3 mt-8">
+               <div class="text-center bg-gray-50 p-5 py-8 flex flex-col h-full shadow-sm transform transition duration-300 hover:scale-105">
+                  <i class="fa-regular fa-bullseye-arrow text-7xl text-red-500"></i>
+                  <h3 class="font-fm text-3xl font-semibold text-blue-900 py-4">Our Mission</h3>
+                  <p>
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  
+                  </p>
+               </div>
+               <div class="text-center bg-gray-50 p-5 py-8 flex flex-col h-full shadow-sm transform transition duration-300 hover:scale-105">
+                  <i class="fa-sharp fa-solid fa-eye text-7xl text-red-500"></i>
+                  <h3 class="font-fm text-3xl font-semibold text-blue-900 py-4">Our Vision</h3>
+                  <p>
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  
+                  </p>
+               </div>
+               <div class="text-center bg-gray-50 p-5 py-8 flex flex-col h-full shadow-sm transform transition duration-300 hover:scale-105">
+                  <i class="fa-solid fa-hands-holding-diamond text-7xl text-red-500"></i>
+                  <h3 class="font-fm text-3xl font-semibold text-blue-900 py-4">Our Values</h3>
+                  <p>
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  
+                  </p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="py-20">
+         <div class="max-w-screen-xl m-auto">
+            <h2 class="mb-3 text-3xl font-bold tracking-tight   font-fm text-center">Reasons To Join Sarvhitkari</h2>
+            <div class="h-2 rounded-xl w-15 bg-red-500 mx-auto"></div>
+            <div class="grid lg:grid-cols-4 grid-cols-1 my-10 lg:gap-2 gap-0">
+               <div class="ss group relative m-2 overflow-hidden cursor-pointer">
+                  <div class="cursor-pointer relative overflow-hidden rounded-md shadow  ">
+                     <img alt="" class="w-full h-72 object-cover scale-125 group-hover:scale-100 duration-500" src="images/ss-1.jpg">
+                     <div class="absolute inset-0 bg-gradient-to-b to-slate-900 from-transparent opacity-0 group-hover:opacity-100 duration-500"></div>
+                     <div class="absolute p-4 bottom-0 start-0">
+                        <a class="text-lg font-medium text-white hover:text-blue duration-500 ease-in-out bg-red-500 px-2 py-1 rounded-md">Attentions to sports</a>
+                     </div>
+                  </div>
+                  <!-- Hidden Text - Shows on Hover -->
+                  <div class="absolute top-0 h-full left-0 w-full bg-blue-900 text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-lg rounded-md">
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et.
+                  </div>
+               </div>
+               <div class="ss group relative m-2 overflow-hidden cursor-pointer">
+                  <div class="cursor-pointer relative overflow-hidden rounded-md shadow  ">
+                     <img alt="" class="w-full h-72 object-cover scale-125 group-hover:scale-100 duration-500" src="images/ss-2.jpg">
+                     <div class="absolute inset-0 bg-gradient-to-b to-slate-900 from-transparent opacity-0 group-hover:opacity-100 duration-500"></div>
+                     <div class="absolute p-4 bottom-0 start-0">
+                        <a class="text-lg font-medium text-white hover:text-blue duration-500 ease-in-out bg-red-500 px-2 py-1 rounded-md">Skilled Faculty</a>
+                     </div>
+                  </div>
+                  <!-- Hidden Text - Shows on Hover -->
+                  <div class="absolute top-0 h-full left-0 w-full bg-blue-900 text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-lg rounded-md">
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et.
+                  </div>
+               </div>
+               <div class="ss group relative m-2 overflow-hidden cursor-pointer">
+                  <div class="cursor-pointer relative overflow-hidden rounded-md shadow  ">
+                     <img alt="" class="w-full h-72 object-cover scale-125 group-hover:scale-100 duration-500" src="images/ss-3.jpg">
+                     <div class="absolute inset-0 bg-gradient-to-b to-slate-900 from-transparent opacity-0 group-hover:opacity-100 duration-500"></div>
+                     <div class="absolute p-4 bottom-0 start-0">
+                        <a class="text-lg font-medium text-white hover:text-blue duration-500 ease-in-out bg-red-500 px-2 py-1 rounded-md">Well Equipped La</a>
+                     </div>
+                  </div>
+                  <!-- Hidden Text - Shows on Hover -->
+                  <div class="absolute top-0 h-full left-0 w-full bg-blue-900 text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-lg rounded-md">
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et.
+                  </div>
+               </div>
+               <div class="ss group relative m-2 overflow-hidden cursor-pointer">
+                  <div class="cursor-pointer relative overflow-hidden rounded-md shadow  ">
+                     <img alt="" class="w-full h-72 object-cover scale-125 group-hover:scale-100 duration-500" src="images/ss-4.jpg">
+                     <div class="absolute inset-0 bg-gradient-to-b to-slate-900 from-transparent opacity-0 group-hover:opacity-100 duration-500"></div>
+                     <div class="absolute p-4 bottom-0 start-0">
+                        <a class="text-lg font-medium text-white hover:text-blue duration-500 ease-in-out bg-red-500 px-2 py-1 rounded-md">NCC</a>
+                     </div>
+                  </div>
+                  <!-- Hidden Text - Shows on Hover -->
+                  <div class="absolute top-0 h-full left-0 w-full bg-blue-900 text-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-lg rounded-md">
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et.
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="py-20  bg-blue-100 bg-cover bg-center " style="background-image: url('images/bg.jpg'); position: relative;">
+         <div class="absolute inset-0 bg-black opacity-50"></div>
+         <div class="max-w-screen-xl m-auto lg:px-0 px-4 z-20 relative">
+            <h2 class="mb-3 text-3xl font-bold tracking-tight text-white  font-fm text-center">Shining Stars Of Our School</h2>
+            <div class="h-2 rounded-xl w-15 bg-red-500 mx-auto mb-8"></div>
+            <div id="multi-carousel" class="relative w-full overflow-hidden">
+               <!-- Carousel wrapper -->
+               <div class="flex transition-transform duration-700 ease-in-out " id="carousel-inner">
+                  <!-- Item 1 -->
+                  <div class="w-1/3 flex-shrink-0 bg-white p-3bg-white p-3 ">
+                     <img src="images/slide-1.jpg" class="w-full h-96 object-cover " alt="...">
+                     <h2 class="text-center pt-2 text-2xl font-semibold text-blue-900">Amrinder (98%)</h2>
+                     <p class="text-xl text-center">Class: 8th</p>
+                  </div>
+                  <!-- Item 2 -->
+                  <div class="w-1/3 flex-shrink-0 bg-white p-3">
+                     <img src="images/stu-1.jpg" class="w-full h-96 object-cover " alt="...">
+                     <h2 class="text-center pt-2 text-2xl font-semibold text-blue-900">Deepak (92%)</h2>
+                     <p class="text-xl text-center">Class: 10th</p>
+                  </div>
+                  <!-- Item 3 -->
+                  <div class="w-1/3 flex-shrink-0 bg-white p-3">
+                     <img src="images/slide-3.avif" class="w-full h-96 object-cover " alt="...">
+                     <h2 class="text-center pt-2 text-2xl font-semibold text-blue-900">Neeshu (98%)</h2>
+                     <p class="text-xl text-center">Class: 8th</p>
+                  </div>
+                  <!-- Item 4 -->
+                  <div class="w-1/3 flex-shrink-0 bg-white p-3">
+                     <img src="images/stu-2.jpg" class="w-full h-96 object-cover " alt="...">
+                     <h2 class="text-center pt-2 text-2xl font-semibold text-blue-900">Amandeep (88%)</h2>
+                     <p class="text-xl text-center">Class: 10th</p>
+                  </div>
+                  <!-- Item 5 -->
+               </div>
+               <!-- Slider controls -->
+               <button id="prev-slide"  class="cursor-pointer absolute top-1/2 w-10 h-10 flex items-center justify-center start-0 z-30 transform -translate-y-1/2 p-4 bg-blue-800 text-white rounded-full">
+               <i class="fa-solid fa-angle-left"></i>
+               </button>
+               <button id="next-slide" class="cursor-pointer absolute top-1/2 w-10 h-10 flex items-center justify-center end-0 z-30 transform -translate-y-1/2 p-4 bg-blue-800 text-white rounded-full">
+               <i class="fa-solid fa-angle-right"></i>
+               </button>
+            </div>
+         </div>
+      </section>
+      <section class="py-20 bg-gray-100">
+         <div class="max-w-screen-xl m-auto lg:px-0 px-4">
+            <a href="#" class="flex flex-col md:flex-row items-center bg-white border border-gray-200 rounded-lg shadow-sm w-full overflow-hidden">
+               <!-- Image Section (50%) -->
+               <div class="lg:w-1/2 w-full overflow-hidden">
+                  <img class="object-cover  h-96 md:h-auto transition-transform duration-300 ease-in-out hover:scale-110" 
+                     src="images/teachers.jpg" alt="">
+               </div>
+               <!-- Content Section (50%) -->
+               <div class="lg:w-1/2 w-full flex flex-col justify-between p-4 leading-normal">
+                  <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-3.5 py-1.5 rounded-sm   w-fit">News</span>
+                  <h5 class="my-2 text-3xl font-bold tracking-tight text-gray-900   font-fm">Sarvhitkari Model
+                     Senior Secondary 
+                  </h5>
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900   font-fm">Admissions Open</h5>
+                  <p class="mb-3 font-normal text-gray-700  ">Admission Open for 2025-26 session from Nursery to 12th without admission fee</p>
+                  <button type="button" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-3.5 me-2 mb-2 block w-fit">
+                  Enroll Now <i class="fa-sharp fa-regular fa-arrow-right"></i>
+                  </button>
+               </div>
+            </a>
+         </div>
+      </section>
+      <section class="footer bg-blue-900">
+         <div class="container mx-auto px-4">
+            <footer class="relative z-10 bg-blue-900 text-white pt-10">
+               <div class="container mx-auto">
+                  <div class="flex flex-wrap ">
+                     <div class="w-full px-4 sm:w-2/3 lg:w-3/12">
+                        <div class="w-full mb-10">
+                           <a href=" " class="flex items-center space-x-3 rtl:space-x-reverse mb-5">
+                           <img class="logo" src="images/logo-footer.png" alt=""></a>
+                           <p class="text-base text-body-color   mb-7">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+                        </div>
+                     </div>
+                     <div class="w-full px-4 sm:w-1/2 lg:w-2/12">
+                        <div class="w-full mb-10">
+                           <h4 class="text-lg font-semibold text-dark  text-yellow-300 mb-9">Quick Links</h4>
+                           <ul class="space-y-3">
+                              <li><a class="inline-block text-base leading-loose text-body-color  " href="/">Our Message</a></li>
+                              <li><a class="inline-block text-base leading-loose text-body-color  " href="/">Our Faculty</a></li>
+                              <li><a class="inline-block text-base leading-loose text-body-color  " href="/">School Club</a></li>
+                              <li><a class="inline-block text-base leading-loose text-body-color  " href="/">Gallery</a></li>
+                              <li><a class="inline-block text-base leading-loose text-body-color  " href="/">Mandatory Public Disclosure</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="w-full px-4 sm:w-1/2 lg:w-2/12">
+                        <div class="w-full mb-10">
+                           <h4 class="text-lg font-semibold text-dark text-yellow-300 mb-9"> Admissions</h4>
+                           <ul class="space-y-3">
+                              <li><a class="inline-block text-base leading-loose text-body-color  " href="/">Admission Procedure</a></li>
+                              <li><a class="inline-block text-base leading-loose text-body-color  " href="/">Admission Form</a></li>
+                              <li><a class="inline-block text-base leading-loose text-body-color hover:text-primary  " href="/">Fee Structure</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="w-full px-4 sm:w-1/2 lg:w-2/12">
+                        <div class="w-full mb-10">
+                           <h4 class="text-lg font-semibold text-dark text-yellow-300 mb-9">
+                              Academics
+                           </h4>
+                           <ul class="space-y-3">
+                              <li><a class="inline-block text-base leading-loose text-body-color hover:text-primary  " href="/">Balvatika</a></li>
+                              <li><a class="inline-block text-base leading-loose text-body-color hover:text-primary  " href="/">Primary</a></li>
+                              <li><a class="inline-block text-base leading-loose text-body-color hover:text-primary  " href="/">Secondary</a></li>
+                              <li><a class="inline-block text-base leading-loose text-body-color hover:text-primary  " href="/">Senior Secondary</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="w-full px-4 sm:w-1/2 lg:w-3/12">
+                        <div class="w-full mb-10">
+                           <h4 class="text-lg font-semibold text-dark text-yellow-300 mb-9">Get all the information</h4>
+                           <div class="lg:ms-8">
+                              <div class="flex mt-4">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin size-4 text-yellow-300 me-2 mt-1">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                 </svg>
+                                 <div class="">
+                                    <h6 class="text-white ">P.O. Box # 322 <br> 5 Sicomac Rd, Suite 6<br>North Haledon, NJ 07508</h6>
+                                 </div>
+                              </div>
+                              <div class="flex mt-4">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail size-4 text-yellow-300 me-2 mt-1">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                 </svg>
+                                 <div class=""><a href="mailto:admistion@school.com" class="text-white  hover:text-slate-400 duration-500 ease-in-out">admistion@school.com</a></div>
+                              </div>
+                              <div class="flex mt-4">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone size-4 text-yellow-300 me-2 mt-1">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                 </svg>
+                                 <div class=""><a href="tel:(973) 636-6660" class="text-white  hover:text-slate-400 duration-500 ease-in-out">+91 123456789</a></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <span class="absolute left-0 bottom-0 z-[-1]">
+                     <svg width="217" height="229" viewBox="0 0 217 229" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M-64 140.5C-64 62.904 -1.096 1.90666e-05 76.5 1.22829e-05C154.096 5.49924e-06 217 62.904 217 140.5C217 218.096 154.096 281 76.5 281C-1.09598 281 -64 218.096 -64 140.5Z" fill="url(#paint0_linear_1179_5)"></path>
+                        <defs>
+                           <linearGradient id="paint0_linear_1179_5" x1="76.5" y1="281" x2="76.5" y2="1.22829e-05" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#3056D3" stop-opacity="0.08"></stop>
+                              <stop offset="1" stop-color="#C4C4C4" stop-opacity="0"></stop>
+                           </linearGradient>
+                        </defs>
+                     </svg>
+                  </span>
+                  <span class="absolute top-10 right-10 z-[-1]">
+                     <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M37.5 -1.63918e-06C58.2107 -2.54447e-06 75 16.7893 75 37.5C75 58.2107 58.2107 75 37.5 75C16.7893 75 -7.33885e-07 58.2107 -1.63918e-06 37.5C-2.54447e-06 16.7893 16.7893 -7.33885e-07 37.5 -1.63918e-06Z" fill="url(#paint0_linear_1179_4)"></path>
+                        <defs>
+                           <linearGradient id="paint0_linear_1179_4" x1="-1.63917e-06" y1="37.5" x2="75" y2="37.5" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#13C296" stop-opacity="0.31"></stop>
+                              <stop offset="1" stop-color="#C4C4C4" stop-opacity="0"></stop>
+                           </linearGradient>
+                        </defs>
+                     </svg>
+                  </span>
+               </div>
+            </footer>
+         </div>
+      </section>
+      <div class="bg-blue-800 py-2 shadow-lg">
+         <div class="container mx-auto px-4 flex flex-wrap items-center justify-between gap-2 ">
+            <div class="text-center text-sm text-white">
+               <p>© 2025 Sarvhitkari Model
+                  Senior Secondary.  All rights reserved.
+               </p>
+            </div>
+            <div class="flex gap-2 text-white text-sm">
+               <div class="flex items-center justify-end gap-2">
+                  <a href=" " target="_blank" class="flex items-center justify-center w-8 h-8   border rounded-full text-dark hover:border-primary hover:bg-primary border-stroke     hover:text-white  ">
+                     <svg width="8" height="16" viewBox="0 0 8 16" class="fill-current">
+                        <path d="M7.43902 6.4H6.19918H5.75639V5.88387V4.28387V3.76774H6.19918H7.12906C7.3726 3.76774 7.57186 3.56129 7.57186 3.25161V0.516129C7.57186 0.232258 7.39474 0 7.12906 0H5.51285C3.76379 0 2.54609 1.44516 2.54609 3.5871V5.83226V6.34839H2.10329H0.597778C0.287819 6.34839 0 6.63226 0 7.04516V8.90323C0 9.26452 0.243539 9.6 0.597778 9.6H2.05902H2.50181V10.1161V15.3032C2.50181 15.6645 2.74535 16 3.09959 16H5.18075C5.31359 16 5.42429 15.9226 5.51285 15.8194C5.60141 15.7161 5.66783 15.5355 5.66783 15.3806V10.1419V9.62581H6.13276H7.12906C7.41688 9.62581 7.63828 9.41935 7.68256 9.10968V9.08387V9.05806L7.99252 7.27742C8.01466 7.09677 7.99252 6.89032 7.85968 6.68387C7.8154 6.55484 7.61614 6.42581 7.43902 6.4Z"></path>
+                     </svg>
+                  </a>
+                  <a href=" " target="_blank" class="flex items-center justify-center w-8 h-8   border rounded-full text-dark hover:border-primary hover:bg-primary border-stroke   hover:text-white   ">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"></path>
+                     </svg>
+                  </a>
+                  <a href=" " target="_blank" class="flex items-center justify-center w-8 h-8   border rounded-full text-dark hover:border-primary hover:bg-primary border-stroke   hover:text-white  ">
+                     <svg width="16" height="12" viewBox="0 0 16 12" class="fill-current">
+                        <path d="M15.6645 1.88018C15.4839 1.13364 14.9419 0.552995 14.2452 0.359447C13.0065 6.59222e-08 8 0 8 0C8 0 2.99355 6.59222e-08 1.75484 0.359447C1.05806 0.552995 0.516129 1.13364 0.335484 1.88018C0 3.23502 0 6 0 6C0 6 0 8.79263 0.335484 10.1198C0.516129 10.8664 1.05806 11.447 1.75484 11.6406C2.99355 12 8 12 8 12C8 12 13.0065 12 14.2452 11.6406C14.9419 11.447 15.4839 10.8664 15.6645 10.1198C16 8.79263 16 6 16 6C16 6 16 3.23502 15.6645 1.88018ZM6.4 8.57143V3.42857L10.5548 6L6.4 8.57143Z"></path>
+                     </svg>
+                  </a>
+                  <a href=" " target="_blank" class="flex items-center justify-center w-8 h-8  border rounded-full text-dark hover:border-primary hover:bg-primary border-stroke     hover:text-white  ">
+                     <svg width="14" height="14" viewBox="0 0 14 14" class="fill-current">
+                        <path d="M13.0214 0H1.02084C0.453707 0 0 0.451613 0 1.01613V12.9839C0 13.5258 0.453707 14 1.02084 14H12.976C13.5432 14 13.9969 13.5484 13.9969 12.9839V0.993548C14.0422 0.451613 13.5885 0 13.0214 0ZM4.15142 11.9H2.08705V5.23871H4.15142V11.9ZM3.10789 4.3129C2.42733 4.3129 1.90557 3.77097 1.90557 3.11613C1.90557 2.46129 2.45002 1.91935 3.10789 1.91935C3.76577 1.91935 4.31022 2.46129 4.31022 3.11613C4.31022 3.77097 3.81114 4.3129 3.10789 4.3129ZM11.9779 11.9H9.9135V8.67097C9.9135 7.90323 9.89082 6.8871 8.82461 6.8871C7.73571 6.8871 7.57691 7.74516 7.57691 8.60323V11.9H5.51254V5.23871H7.53154V6.16452H7.55423C7.84914 5.62258 8.50701 5.08065 9.52785 5.08065C11.6376 5.08065 12.0232 6.43548 12.0232 8.2871V11.9H11.9779Z"></path>
+                     </svg>
+                  </a>
+                  <a href=" " target="_blank" class="flex items-center justify-center w-8 h-8  border rounded-full text-dark hover:border-primary hover:bg-primary border-stroke   hover:text-white  ">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-pinterest" viewBox="0 0 16 16">
+                        <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+         </div>
       </div>
-   </section>
-
-   <div class="bg-blue-800 py-2 shadow-lg">
-    <div class="container mx-auto px-4 flex flex-wrap items-center justify-between gap-2 ">
-       <div class="text-center text-sm text-white">
-        <p>© 2025 Sarvhitkari Model
-          Senior Secondary.  All rights reserved.</p>
-       </div>
-       <div class="flex gap-2 text-white text-sm"> 
-
-        <div class="flex items-center justify-end gap-2">
-          <a href=" " target="_blank" class="flex items-center justify-center w-8 h-8   border rounded-full text-dark hover:border-primary hover:bg-primary border-stroke     hover:text-white  ">
-             <svg width="8" height="16" viewBox="0 0 8 16" class="fill-current">
-                <path d="M7.43902 6.4H6.19918H5.75639V5.88387V4.28387V3.76774H6.19918H7.12906C7.3726 3.76774 7.57186 3.56129 7.57186 3.25161V0.516129C7.57186 0.232258 7.39474 0 7.12906 0H5.51285C3.76379 0 2.54609 1.44516 2.54609 3.5871V5.83226V6.34839H2.10329H0.597778C0.287819 6.34839 0 6.63226 0 7.04516V8.90323C0 9.26452 0.243539 9.6 0.597778 9.6H2.05902H2.50181V10.1161V15.3032C2.50181 15.6645 2.74535 16 3.09959 16H5.18075C5.31359 16 5.42429 15.9226 5.51285 15.8194C5.60141 15.7161 5.66783 15.5355 5.66783 15.3806V10.1419V9.62581H6.13276H7.12906C7.41688 9.62581 7.63828 9.41935 7.68256 9.10968V9.08387V9.05806L7.99252 7.27742C8.01466 7.09677 7.99252 6.89032 7.85968 6.68387C7.8154 6.55484 7.61614 6.42581 7.43902 6.4Z"></path>
-             </svg>
-          </a>
-          <a href=" " target="_blank" class="flex items-center justify-center w-8 h-8   border rounded-full text-dark hover:border-primary hover:bg-primary border-stroke   hover:text-white   ">
-             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
-                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"></path>
-             </svg>
-          </a>
-          <a href=" " target="_blank" class="flex items-center justify-center w-8 h-8   border rounded-full text-dark hover:border-primary hover:bg-primary border-stroke   hover:text-white  ">
-             <svg width="16" height="12" viewBox="0 0 16 12" class="fill-current">
-                <path d="M15.6645 1.88018C15.4839 1.13364 14.9419 0.552995 14.2452 0.359447C13.0065 6.59222e-08 8 0 8 0C8 0 2.99355 6.59222e-08 1.75484 0.359447C1.05806 0.552995 0.516129 1.13364 0.335484 1.88018C0 3.23502 0 6 0 6C0 6 0 8.79263 0.335484 10.1198C0.516129 10.8664 1.05806 11.447 1.75484 11.6406C2.99355 12 8 12 8 12C8 12 13.0065 12 14.2452 11.6406C14.9419 11.447 15.4839 10.8664 15.6645 10.1198C16 8.79263 16 6 16 6C16 6 16 3.23502 15.6645 1.88018ZM6.4 8.57143V3.42857L10.5548 6L6.4 8.57143Z"></path>
-             </svg>
-          </a>
-          <a href=" " target="_blank" class="flex items-center justify-center w-8 h-8  border rounded-full text-dark hover:border-primary hover:bg-primary border-stroke     hover:text-white  ">
-             <svg width="14" height="14" viewBox="0 0 14 14" class="fill-current">
-                <path d="M13.0214 0H1.02084C0.453707 0 0 0.451613 0 1.01613V12.9839C0 13.5258 0.453707 14 1.02084 14H12.976C13.5432 14 13.9969 13.5484 13.9969 12.9839V0.993548C14.0422 0.451613 13.5885 0 13.0214 0ZM4.15142 11.9H2.08705V5.23871H4.15142V11.9ZM3.10789 4.3129C2.42733 4.3129 1.90557 3.77097 1.90557 3.11613C1.90557 2.46129 2.45002 1.91935 3.10789 1.91935C3.76577 1.91935 4.31022 2.46129 4.31022 3.11613C4.31022 3.77097 3.81114 4.3129 3.10789 4.3129ZM11.9779 11.9H9.9135V8.67097C9.9135 7.90323 9.89082 6.8871 8.82461 6.8871C7.73571 6.8871 7.57691 7.74516 7.57691 8.60323V11.9H5.51254V5.23871H7.53154V6.16452H7.55423C7.84914 5.62258 8.50701 5.08065 9.52785 5.08065C11.6376 5.08065 12.0232 6.43548 12.0232 8.2871V11.9H11.9779Z"></path>
-             </svg>
-          </a>
-          <a href=" " target="_blank" class="flex items-center justify-center w-8 h-8  border rounded-full text-dark hover:border-primary hover:bg-primary border-stroke   hover:text-white  ">
-             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-pinterest" viewBox="0 0 16 16">
-                <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0"></path>
-             </svg>
-          </a>
-       </div>
-       </div>
-    </div>
- </div>
- <script>
-  const carouselInner = document.getElementById('carousel-inner');
-  const prevBtn = document.getElementById('prev-slide');
-  const nextBtn = document.getElementById('next-slide');
-
-  let index = 0;
-  const totalSlides = document.querySelectorAll('#carousel-inner > div').length;
-  const visibleSlides = 3;
-
-  function updateCarousel() {
-      const translateX = -(index * (100 / visibleSlides)) + '%';
-      carouselInner.style.transform = `translateX(${translateX})`;
-  }
-
-  nextBtn.addEventListener('click', () => {
-      if (index < totalSlides - visibleSlides) {
-          index++;
-          updateCarousel();
-      }
-  });
-
-  prevBtn.addEventListener('click', () => {
-      if (index > 0) {
-          index--;
-          updateCarousel();
-      }
-  });
-
-  updateCarousel(); // Ensure initial position
-</script>
-
-<!-- JavaScript for Mobile Submenu Toggle -->
-<script>
-  function toggleSubmenu(id) {
-    const submenu = document.getElementById(id);
-    submenu.classList.toggle('hidden');
-  }
-</script>
-  </body>
+      <script>
+         const carouselInner = document.getElementById('carousel-inner');
+         const prevBtn = document.getElementById('prev-slide');
+         const nextBtn = document.getElementById('next-slide');
+         
+         let index = 0;
+         const totalSlides = document.querySelectorAll('#carousel-inner > div').length;
+         const visibleSlides = 3;
+         
+         function updateCarousel() {
+             const translateX = -(index * (100 / visibleSlides)) + '%';
+             carouselInner.style.transform = `translateX(${translateX})`;
+         }
+         
+         nextBtn.addEventListener('click', () => {
+             if (index < totalSlides - visibleSlides) {
+                 index++;
+                 updateCarousel();
+             }
+         });
+         
+         prevBtn.addEventListener('click', () => {
+             if (index > 0) {
+                 index--;
+                 updateCarousel();
+             }
+         });
+         
+         updateCarousel(); // Ensure initial position
+      </script>
+      <!-- JavaScript for Mobile Submenu Toggle -->
+      <script>
+         function toggleSubmenu(id) {
+           const submenu = document.getElementById(id);
+           submenu.classList.toggle('hidden');
+         }
+      </script>
+   </body>
 </html>
