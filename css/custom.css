@@ -65,3 +65,8 @@ img.logo {
         width: 69px;
     }
 }
+
+.pagetitle{
+  background-image: url('../images/pagetitle.jpg');
+  background-repeat: no-repeat;
+}
