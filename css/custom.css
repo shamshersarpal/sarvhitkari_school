@@ -75,3 +75,8 @@ img.logo {
   background-image: url('../images/pagetitle.jpg');
   background-repeat: no-repeat;
 }
+
+.pagetitle2{
+  background-image: url('../images/feespage.JPG');
+  background-repeat: no-repeat;
+}
